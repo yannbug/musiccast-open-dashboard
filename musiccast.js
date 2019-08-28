@@ -242,6 +242,32 @@ function clog(data){
 			});
 		});
 		
+		$('#fs_button').on('click', function(e){
+			clog( 'clicked Function Status!' );
+			var url = 'http://' + device_ip + api_base_url + 'system/getFuncStatus';
+			$.get( url, function( data ) {
+				clog('Success!');
+				get_status();
+				var html = JSON.stringify( data );
+				$('#visual').html( html );
+			}).fail( function() {
+				clog( 'Failed for URL: ' + url );
+			});
+		});
+		
+		$('#status_button').on('click', function(e){
+			clog( 'clicked Status Button!' );
+			var url = 'http://' + device_ip + api_base_url + 'main/getStatus';
+			$.get( url, function( data ) {
+				clog('Success!');
+				get_status();
+				var html = JSON.stringify( data );
+				$('#visual').html( html );
+			}).fail( function() {
+				clog( 'Failed for URL: ' + url );
+			});
+		});
+		
 		$('#scan_button').on('click', function(e){
 			clog( 'clicked Scan!' );
 			
