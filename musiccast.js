@@ -30,6 +30,50 @@ function clog(data){
 			get_status();
 		});
 		
+		$('#mute_button').on('click', function(e){
+			clog( 'Toggeling mute...' );
+			var url = 'http://' + device_ip + api_base_url + 'main/setMute?enable=true';
+			$.get( url, function( data ) {
+				clog('Success!');
+				get_status();
+			}).fail( function() {
+				clog( 'Failed for URL: ' + url );
+			});
+		});
+		
+		$('#unmute_button').on('click', function(e){
+			clog( 'Toggeling mute...' );
+			var url = 'http://' + device_ip + api_base_url + 'main/setMute?enable=false';
+			$.get( url, function( data ) {
+				clog('Success!');
+				get_status();
+			}).fail( function() {
+				clog( 'Failed for URL: ' + url );
+			});
+		});
+		
+		$('#volume_dec').on('click', function(e){
+			clog( 'Decreasing volume...' );
+			var url = 'http://' + device_ip + api_base_url + 'main/setVolume?volume=down';
+			$.get( url, function( data ) {
+				clog('Success!');
+				get_status();
+			}).fail( function() {
+				clog( 'Failed for URL: ' + url );
+			});
+		});
+		
+		$('#volume_inc').on('click', function(e){
+			clog( 'Increasing volume...' );
+			var url = 'http://' + device_ip + api_base_url + 'main/setVolume?volume=up';
+			$.get( url, function( data ) {
+				clog('Success!');
+				get_status();
+			}).fail( function() {
+				clog( 'Failed for URL: ' + url );
+			});
+		});
+		
 		/** Get the status of the device **/
 		get_status = function() {
 			clog( 'Getting status...' );

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Musiccast
+Exec=/home/ydubois/git/musiccast-open-dashboard/musiccast-dashboard.sh
+Comment=Musiccast-dashboard
+Terminal=false
+Type=Application
+Icon=

@@ -4,13 +4,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./musiccast.js"></script>
 </head>
-<body>
-<h1>MusicCast Dashboard</h1>
+<body style="margin:0;background-image:url('img/WXAD-10-photo.jpg');background-size:contain;background-repeat: no-repeat;">
+<div style="width:80%;margin:0 auto;">
 <form id="get_ip" style="display:none">
-<label for="ip">Local IP address of the MusicCast device to monitor:</label>
-<input type="text" name="device_ip" id="device_ip" />
-<input type="button" value="Ok" id="ok_button" />
+	<p>
+		<label for="ip">Local IP address of the MusicCast device to monitor:</label>
+		<input type="text" name="device_ip" id="device_ip" />
+		<input type="button" value="Ok" id="ok_button" />
+	</p>
+	<p>
+		<input type="button" value="Mute" id="mute_button" />
+		<input type="button" value="Un-mute" id="unmute_button" />
+		<input type="button" value="-" id="volume_dec" />
+		Volume
+		<input type="button" value="+" id="volume_inc" />
+	</p>
 </form>
+</div>
 <div id="content"></div>
 </body>
 </html>
