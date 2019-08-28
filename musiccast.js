@@ -87,7 +87,7 @@ function clog(data){
 				var total_time = pad( Math.floor( data.total_time / 60 ), 2 ) + ':' +
 					pad( ( data.total_time % 60 ), 2 );
 				
-				var html = '<ul>' +
+				var html = '<ul style="width:80%;margin:0 auto 5px;">' +
 					'<li><strong>Input:</strong> <em>' + data.input + '</em></li>' +
 					'<li><strong>Play queue type:</strong> <em>' + data.play_queue_type + '</em></li>' +
 					'<li><strong>Playback status:</strong> <em>' + data.playback + '</em></li>' +
