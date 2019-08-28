@@ -4,23 +4,38 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./musiccast.js"></script>
 </head>
-<body style="margin:0;background-image:url('img/WXAD-10-photo.jpg');background-size:contain;background-repeat: no-repeat;">
-<div style="width:80%;margin:0 auto;color:#fff;">
-<form id="get_ip" style="display:none">
-	<p>
-		<label for="ip">Local IP address of the MusicCast device to monitor:</label>
-		<input type="text" name="device_ip" id="device_ip" />
+<body style="margin:0;background-color:b8b8b8;background-image:url('img/WXAD10-detoure-600.png');background-size:contain;background-repeat: no-repeat;text-align:center;">
+<div style="height:77px;width:60%;margin:25px auto 0;color:#fff;overflow:hidden;">
+<form style="margin-block-end:0;">
+	<p id="get_ip" style="display:none;margin:0;">
+		<label for="ip" title="Local IP address of the MusicCast device to control">IP:
+		<input type="text" name="device_ip" size="15" id="device_ip" /></label>
+		<select id="device_list_sel"></select>
 		<input type="button" value="Ok" id="ok_button" />
 	</p>
-	<p>
+	<p id="change_ip" style="display:none;margin:0;">
+		<input type="button" value="Power" id="power_button" />
+		<input type="button" value="Switch device" id="switch_button" />
+		<input type="button" value="Info" id="info_button" />
+		<input type="button" value="Feat." id="features_button" />
+		<input type="button" value="Netw." id="network_button" />
+		<input type="button" value="Scan" id="scan_button" />
+	</p>
+	<div class="control-bar" style="margin:18px auto;">
+	<p style="margin:0;">
+		<input type="button" value="<" id="prev_button" />
+		<input type="button" value="Stop" id="stop_button" />
+		<input type="button" value="Play" id="play_button" />
 		<input type="button" value="Mute" id="mute_button" />
 		<input type="button" value="Un-mute" id="unmute_button" />
 		<input type="button" value="-" id="volume_dec" />
-		Volume
+		Vol.
 		<input type="button" value="+" id="volume_inc" />
+		<input type="button" value=">" id="next_button" />
 	</p>
+	</div>
 </form>
 </div>
-<div id="content" style="color:#fff;"></div>
+<div id="content" style="color:#a2d8d1;text-align:left;font-family:'Ubuntu Condensed',sans-serif;"></div>
 </body>
 </html>
