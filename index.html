@@ -1,6 +1,8 @@
 <html>
 <head>
 <title>MusicCast Dashboard</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./musiccast.js"></script>
 </head>
@@ -14,30 +16,18 @@
 		<input type="button" value="Ok" id="ok_button" />
 	</p>
 	<p id="change_ip" style="display:none;margin:0;">
-		<input type="button" value="Pwr." id="power_button" />
 		<input type="button" value="Swtch device" id="switch_button" />
 		<input type="button" value="Inf." id="info_button" />
 		<input type="button" value="Feat." id="features_button" />
 		<input type="button" value="Net." id="network_button" />
 		<input type="button" value="FS" id="fs_button" />
-		<input type="button" value="St" id="status_button" />
 		<input type="button" value="Scan" id="scan_button" />
 	</p>
-	<div class="control-bar" style="margin:18px auto;">
-	<p style="margin:0;">
-		<input type="button" value="<" id="prev_button" />
-		<input type="button" value="Stop" id="stop_button" />
-		<input type="button" value="Play" id="play_button" />
-		<input type="button" value="Mute" id="mute_button" />
-		<input type="button" value="Un-mute" id="unmute_button" />
-		<input type="button" value="-" id="volume_dec" />
-		Vol.
-		<input type="button" value="+" id="volume_inc" />
-		<input type="button" value=">" id="next_button" />
-	</p>
-	</div>
 </form>
 </div>
 <div id="content" style="color:#a2d8d1;text-align:left;font-family:'Ubuntu Condensed',sans-serif;"></div>
+<div id="left_led" style="position:absolute;top:196px;left:281px;height:9px;width:9px;background-image:url('img/off-light.png');"></div>
+<div id="middle_led" style="position:absolute;top:196px;left:295px;height:9px;width:9px;background-image:url('img/off-light.png');"></div>
+<div id="right_led" style="position:absolute;top:196px;left:309px;height:9px;width:9px;background-image:url('img/off-light.png');"></div>
 </body>
 </html>
