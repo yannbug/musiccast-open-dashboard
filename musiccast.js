@@ -290,7 +290,7 @@ function clog(data){
 			$('#change_ip').hide();
 		});
 		
-		$('#info_button').on('click', function(e){
+		$(document.body).on( 'click', '#info_button', function(e){
 			clog( 'clicked Info!' );
 			var url = 'http://' + device_ip + api_base_url + 'system/getDeviceInfo';
 			$.get( url, function( data ) {
@@ -316,7 +316,7 @@ function clog(data){
 			});
 		});
 		
-		$('#network_button').on('click', function(e){
+		$(document.body).on( 'click', '#network_button', function(e){
 			clog( 'clicked Network!' );
 			var url = 'http://' + device_ip + api_base_url + 'system/getNetworkStatus';
 			$.get( url, function( data ) {
